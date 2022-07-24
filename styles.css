@@ -64,12 +64,13 @@ ol {
 html:focus-within {
   scroll-behavior: smooth;
 }
-html {
+html,
+body {
   height: 100%;
 }
-body {
+/* body {
   min-height: 100%;
-}
+} */
 
 /* Set core body defaults */
 body {
@@ -118,8 +119,9 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 93px - 2rem);
-  overflow: auto;
+  /* height: 100%; */
+  /* min-height: calc(100vh - 93px - 2rem); */
+  /* overflow: auto; */
   margin-block: 1rem;
   padding-left: 2em;
   padding-right: 2em;
@@ -252,7 +254,8 @@ input[type="submit"]:hover {
 
 footer {
   margin-top: auto;
-  height: 93px;
+  padding-bottom: 3px;
+  /* height: 93px; */
   color: var(--footer-txt-clr);
 }
 footer a {
