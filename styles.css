@@ -1,0 +1,311 @@
+:root {
+  --clr-primary-blue-300: hsl(223 87% 70%);
+  --clr-primary-blue-400: hsl(223 87% 63%);
+
+  --clr-secondary-blue-400: hsl(223 100% 88%);
+  --clr-secondary-red-400: hsl(354 100% 66%);
+
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(0 0% 59%);
+  --clr-neutral-300: hsl(209 33% 12%);
+
+  --footer-txt-clr: var(--clr-neutral-200);
+  --footer-link-clr: var(--clr-neutral-300);
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("./fonts/libre-franklin-v13-latin-300.woff2") format("woff2"),
+    url("./fonts/libre-franklin-v13-latin-300.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""),
+    url("./fonts/libre-franklin-v13-latin-600.woff2") format("woff2"),
+    url("./fonts/libre-franklin-v13-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("./fonts/libre-franklin-v13-latin-700.woff2") format("woff2"),
+    url("./fonts/libre-franklin-v13-latin-700.woff") format("woff");
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--clr-neutral-200);
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: calc(100vh - 20px - 2rem);
+  overflow: auto;
+  margin-block: 1rem;
+}
+
+section {
+  min-height: calc(100vh - 20px - 2rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+header {
+  margin-top: 3em;
+}
+
+.logo-link {
+  display: block;
+  margin: 0 auto;
+  width: max-content;
+}
+.logo-img {
+  height: 20px;
+}
+.title {
+  margin-top: 2em;
+  font-size: 1.5rem;
+}
+.title b {
+  font-weight: 700;
+  color: var(--clr-neutral-300);
+}
+
+.desc {
+  margin-top: 1em;
+  color: var(--clr-neutral-300);
+  font-size: 0.875rem;
+}
+
+form {
+  margin: 2em auto 0;
+  max-width: 600px;
+  height: 8.625rem;
+}
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  border-radius: 100vmax;
+  font-size: 0.875rem;
+}
+
+input[type="email"] {
+  border: 1px solid var(--clr-secondary-blue-400);
+}
+input[type="email"]::placeholder {
+  color: var(--clr-primary-blue-400);
+}
+input[type="email"]:focus-visible {
+  outline: none;
+  border-color: var(--clr-primary-blue-400);
+}
+.was-validated input:not(input[type="submit"]):invalid {
+  border-color: var(--clr-secondary-red-400);
+}
+.invalid-feedback {
+  display: none;
+  font-size: 0.8125rem;
+  font-style: italic;
+  text-align: left;
+  padding-top: 0.3rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--clr-secondary-red-400);
+}
+.was-validated :invalid ~ .invalid-feedback {
+  display: block;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border: 1px solid var(--clr-primary-blue-400);
+  margin-top: 1em;
+  font-weight: 600;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-blue-400);
+  box-shadow: 0 0.5rem 1rem hsl(223 87% 63% / 0.3);
+}
+input[type="submit"]:hover {
+  border: 1px solid var(--clr-primary-blue-300);
+  background-color: var(--clr-primary-blue-300);
+}
+
+.hero-img {
+  margin: 3em auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.sect-footer {
+  margin-top: auto;
+  height: auto;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1em;
+}
+.social-link {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid var(--clr-secondary-blue-400);
+  border-radius: 50%;
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--clr-primary-blue-400);
+}
+
+.social-link:hover {
+  background-color: var(--clr-primary-blue-400);
+  border-color: var(--clr-primary-blue-400);
+}
+
+.social-link:hover svg {
+  fill: var(--clr-neutral-100);
+}
+
+.copy {
+  font-size: 0.75rem;
+}
+
+footer {
+  margin-top: auto;
+  height: 20px;
+  color: var(--footer-txt-clr);
+}
+footer a {
+  color: var(--footer-link-clr);
+}
+
+@media (min-width: 800px) {
+  header {
+    margin-top: 4em;
+  }
+  .logo-img {
+    height: 24px;
+  }
+  .title {
+    margin-top: 0.8em;
+    font-size: 2.7rem;
+  }
+  .desc {
+    margin-top: 0.3em;
+    font-size: 1.125rem;
+  }
+
+  form {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    height: 5.25rem;
+  }
+  form input {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .hero-img {
+    margin-top: 4em;
+  }
+
+  .input-goup {
+    flex-basis: 70%;
+  }
+
+  input[type="submit"] {
+    margin-top: 0;
+    flex-basis: 30%;
+  }
+
+  .social-link svg {
+    width: 14px;
+    height: 14px;
+  }
+}
