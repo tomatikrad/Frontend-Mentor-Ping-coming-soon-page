@@ -110,6 +110,7 @@ body {
   font-family: "Libre Franklin", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  text-align: center;
   color: var(--clr-neutral-200);
 
   display: flex;
@@ -117,16 +118,9 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 20px - 2rem);
+  min-height: calc(100vh - 93px - 2rem);
   overflow: auto;
   margin-block: 1rem;
-}
-
-section {
-  min-height: calc(100vh - 20px - 2rem);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -253,11 +247,12 @@ input[type="submit"]:hover {
 
 .copy {
   font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 footer {
   margin-top: auto;
-  height: 20px;
+  height: 93px;
   color: var(--footer-txt-clr);
 }
 footer a {
